@@ -1,0 +1,47 @@
+<h1 class="mt-4">Customer</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Customer Registration</li>
+</ol>
+<div class="container">
+  <form #clientForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Client code:</label>
+          <input type="text" class="form-control" name="id" [ngModel]="client.id" disabled="true">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Date Registration:</label>
+          <input type="text" class="form-control" name="dateRegister" [ngModel]="client.dateRegister" disabled="true">
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Name: *</label>
+          <input type="text" class="form-control" name="name" [(ngModel)]="client.name">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>NIF: *</label>
+          <input type="text" class="form-control" name="nif" [(ngModel)]="client.nif">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-success">
+          <i class="fa fa-save"></i> Save
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
